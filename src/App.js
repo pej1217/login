@@ -2,6 +2,7 @@
 import './App.css';
 import MultiButton from './cgu_multiButton'
 import HelloCGU from './cgu_hello'
+import Inputs from './inputs'
 
 function App() {
   return(

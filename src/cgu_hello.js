@@ -1,6 +1,6 @@
-const styleArgument = {fontSize :'100px', color: 'red'};
+const styleArgument = {fontSize :'50px', color: '#2894FF'};
 
-const HelloCGU=()=> {
-return <h1 style ={ styleArgument } >hello CUG!!</h1>
+const HelloCGU=(text)=> {
+return <h1 style ={ styleArgument } >hello cgu</h1>
 }
 export default  HelloCGU;

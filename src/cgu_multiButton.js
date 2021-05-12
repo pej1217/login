@@ -1,14 +1,34 @@
-
+import Button from '@material-ui/core/Button';
+import React, {Component} from 'react';
 const MultiButton=(num)=>{
     var output=[];
-    for(let i=1;i<num+1;i++)
-      output.push(<button onClick={changeText}>第{i}個按鍵</button>)
+    for(let i=1;i<num+1;i++){
+      output.push(<CounterButton></CounterButton>)
+    }
     return output;
+}
+
+class CounterButton extends React.Component{
+  constructor(props){
+    super(props)
+    this.state={
+      counter:0
+    }
+    
+    this.handleClick =this.handleClick.bind(this)
   }
 
-  const changeText=(event)=>{
-    console.log(event.target)
-    event.target.innerText=event.target.innerText+"被點了"
+  handleClick(event){
+    this.setState({counter:this.state.counter+1});
+    console.log(this.state);
   }
 
+  render(){
+    var text=this.state.counter;
+    return(
+        <Button onClick={this.handleClick} variant="outlined" color="primary">你點了{text}次
+        </Button>
+      );
+  }
+}
 export default  MultiButton;
